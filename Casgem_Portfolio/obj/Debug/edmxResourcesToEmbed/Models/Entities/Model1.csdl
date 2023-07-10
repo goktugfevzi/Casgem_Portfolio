@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CasgemPortfolioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TblFeature">
+    <Key>
+      <PropertyRef Name="FeatureID" />
+    </Key>
+    <Property Name="FeatureID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FeatureTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureImageURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblService">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ServiceIcon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ServiceNumber" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ServiceContent" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="CasgemPortfolioEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TblFeature" EntityType="Self.TblFeature" />
+    <EntitySet Name="TblService" EntityType="Self.TblService" />
+    <EntitySet Name="TblMessage" EntityType="CasgemPortfolioModel.TblMessage" />
+  </EntityContainer>
+  <EntityType Name="TblMessage">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSurname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="sernderMail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MessageSubject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

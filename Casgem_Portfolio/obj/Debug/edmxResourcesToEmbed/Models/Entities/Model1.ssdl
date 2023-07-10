@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CasgemPortfolioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblFeature">
+    <Key>
+      <PropertyRef Name="FeatureID" />
+    </Key>
+    <Property Name="FeatureID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FeatureTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FeatureDescription" Type="nvarchar" MaxLength="1000" />
+    <Property Name="FeatureImageURL" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TblMessage">
+    <Key>
+      <PropertyRef Name="MessageID" />
+    </Key>
+    <Property Name="MessageID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameSurname" Type="nvarchar" MaxLength="100" />
+    <Property Name="sernderMail" Type="nvarchar" MaxLength="100" />
+    <Property Name="MessageSubject" Type="nvarchar" MaxLength="100" />
+    <Property Name="Content" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TblService">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="ServiceIcon" Type="nvarchar" MaxLength="50" />
+    <Property Name="ServiceNumber" Type="char" MaxLength="2" />
+    <Property Name="ServiceContent" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityContainer Name="CasgemPortfolioModelStoreContainer">
+    <EntitySet Name="TblFeature" EntityType="Self.TblFeature" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMessage" EntityType="Self.TblMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

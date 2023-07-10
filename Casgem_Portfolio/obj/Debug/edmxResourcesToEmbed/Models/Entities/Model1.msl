@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CasgemPortfolioModelStoreContainer" CdmEntityContainer="CasgemPortfolioEntities">
+    <EntitySetMapping Name="TblFeature">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblFeature">
+        <MappingFragment StoreEntitySet="TblFeature">
+          <ScalarProperty Name="FeatureID" ColumnName="FeatureID" />
+          <ScalarProperty Name="FeatureTitle" ColumnName="FeatureTitle" />
+          <ScalarProperty Name="FeatureDescription" ColumnName="FeatureDescription" />
+          <ScalarProperty Name="FeatureImageURL" ColumnName="FeatureImageURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblService">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblService">
+        <MappingFragment StoreEntitySet="TblService">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="ServiceTitle" ColumnName="ServiceTitle" />
+          <ScalarProperty Name="ServiceIcon" ColumnName="ServiceIcon" />
+          <ScalarProperty Name="ServiceNumber" ColumnName="ServiceNumber" />
+          <ScalarProperty Name="ServiceContent" ColumnName="ServiceContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMessage">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblMessage">
+        <MappingFragment StoreEntitySet="TblMessage">
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="MessageSubject" ColumnName="MessageSubject" />
+          <ScalarProperty Name="sernderMail" ColumnName="sernderMail" />
+          <ScalarProperty Name="NameSurname" ColumnName="NameSurname" />
+          <ScalarProperty Name="MessageID" ColumnName="MessageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
