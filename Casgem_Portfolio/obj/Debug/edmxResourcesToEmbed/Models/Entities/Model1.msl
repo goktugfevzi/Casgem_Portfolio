@@ -33,5 +33,26 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TblReference">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblReference">
+        <MappingFragment StoreEntitySet="TblReference">
+          <ScalarProperty Name="ReferenceContent" ColumnName="ReferenceContent" />
+          <ScalarProperty Name="ReferenceImageURL" ColumnName="ReferenceImageURL" />
+          <ScalarProperty Name="ReferenceJob" ColumnName="ReferenceJob" />
+          <ScalarProperty Name="ReferenceName" ColumnName="ReferenceName" />
+          <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblProject">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblProject">
+        <MappingFragment StoreEntitySet="TblProject">
+          <ScalarProperty Name="ProjectURL" ColumnName="ProjectURL" />
+          <ScalarProperty Name="ProjectDescription" ColumnName="ProjectDescription" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

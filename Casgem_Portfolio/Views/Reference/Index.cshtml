@@ -8,7 +8,7 @@
 
 <table class="table table-bordered">
     <tr>
-        <th>#</th>
+        <th>Foto</th>
         <th>İsim</th>
         <th>Ünvanı</th>
         <th>Sil</th>
@@ -17,10 +17,12 @@
     @foreach (var item in Model)
     {
         <tr>
+            <td><img src=@item.ReferenceImageURL height="70" width="90" ></td>
             <td>@item.ReferenceName</td>
             <td>@item.ReferenceJob</td>
-            <td><a href="/Message/DeleteMessage/@item.ReferenceID" class="btn btn-outline-danger">Sil</a></td>
-            <td><a href="/Message/MessageDetails/@item.ReferenceID" class="btn btn-outline-warning">Güncelle</a></td>
+            <td><a href="/Reference/DeleteReference/@item.ReferenceID" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Reference/UpdateReference/@item.ReferenceID" class="btn btn-outline-warning">Güncelle</a></td>
         </tr>
     }
 </table>
+<a href="/Reference/AddReference" class="btn btn-outline-primary">Yeni Referans Ekle</a>

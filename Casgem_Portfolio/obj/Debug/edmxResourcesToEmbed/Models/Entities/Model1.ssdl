@@ -19,6 +19,25 @@
     <Property Name="MessageSubject" Type="nvarchar" MaxLength="100" />
     <Property Name="Content" Type="nvarchar" MaxLength="1000" />
   </EntityType>
+  <EntityType Name="TblProject">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjectName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProjectDescription" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ProjectURL" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TblReference">
+    <Key>
+      <PropertyRef Name="ReferenceID" />
+    </Key>
+    <Property Name="ReferenceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReferenceName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReferenceJob" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReferenceImageURL" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ReferenceContent" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
   <EntityType Name="TblService">
     <Key>
       <PropertyRef Name="ServiceId" />
@@ -32,6 +51,8 @@
   <EntityContainer Name="CasgemPortfolioModelStoreContainer">
     <EntitySet Name="TblFeature" EntityType="Self.TblFeature" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblMessage" EntityType="Self.TblMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblProject" EntityType="Self.TblProject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblReference" EntityType="Self.TblReference" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

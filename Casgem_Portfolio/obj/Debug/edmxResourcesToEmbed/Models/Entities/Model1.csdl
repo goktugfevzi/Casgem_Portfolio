@@ -23,6 +23,8 @@
     <EntitySet Name="TblFeature" EntityType="Self.TblFeature" />
     <EntitySet Name="TblService" EntityType="Self.TblService" />
     <EntitySet Name="TblMessage" EntityType="CasgemPortfolioModel.TblMessage" />
+    <EntitySet Name="TblReference" EntityType="CasgemPortfolioModel.TblReference" />
+    <EntitySet Name="TblProject" EntityType="CasgemPortfolioModel.TblProject" />
   </EntityContainer>
   <EntityType Name="TblMessage">
     <Key>
@@ -33,5 +35,24 @@
     <Property Name="sernderMail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="MessageSubject" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Content" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblReference">
+    <Key>
+      <PropertyRef Name="ReferenceID" />
+    </Key>
+    <Property Name="ReferenceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReferenceName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceJob" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceImageURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceContent" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblProject">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

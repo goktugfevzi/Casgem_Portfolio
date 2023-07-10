@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "AddReference";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Yeni Referans ekleme Sayfası</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <label>Referans Adı</label>
+    <input type="text" class="form-control" name="ReferenceName" />
+    <br />
+    <label>Referans Ünvanı</label>
+    <input type="text" class="form-control" name="ReferenceJob" />
+    <br />
+
+    <label>Referans Mesajı</label>
+    <input type="text" class="form-control" name="ReferenceContent" />
+    <br />
+    <label>Fotoğraf</label>
+    <input type="file" name="ReferenceImageURL" />
+    <br />
+    <button class="btn btn-info">Referansı Kaydet</button>
+</form>
+
