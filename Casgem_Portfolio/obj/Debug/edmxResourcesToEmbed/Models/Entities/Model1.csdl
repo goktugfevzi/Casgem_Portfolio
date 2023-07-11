@@ -25,6 +25,16 @@
     <EntitySet Name="TblMessage" EntityType="CasgemPortfolioModel.TblMessage" />
     <EntitySet Name="TblReference" EntityType="CasgemPortfolioModel.TblReference" />
     <EntitySet Name="TblProject" EntityType="CasgemPortfolioModel.TblProject" />
+    <EntitySet Name="TblResume" EntityType="CasgemPortfolioModel.TblResume" />
+    <EntitySet Name="sysdiagrams" EntityType="CasgemPortfolioModel.sysdiagrams" />
+    <EntitySet Name="TblDepartment" EntityType="CasgemPortfolioModel.TblDepartment" />
+    <EntitySet Name="TblEmployee" EntityType="CasgemPortfolioModel.TblEmployee" />
+    <AssociationSet Name="FK_TblEmployee_TblDepartment" Association="CasgemPortfolioModel.FK_TblEmployee_TblDepartment">
+      <End Role="TblDepartment" EntitySet="TblDepartment" />
+      <End Role="TblEmployee" EntitySet="TblEmployee" />
+    </AssociationSet>
+    <EntitySet Name="TblWhoAmI" EntityType="CasgemPortfolioModel.TblWhoAmI" />
+    <EntitySet Name="TblVideoSection" EntityType="CasgemPortfolioModel.TblVideoSection" />
   </EntityContainer>
   <EntityType Name="TblMessage">
     <Key>
@@ -54,5 +64,76 @@
     <Property Name="ProjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="ProjectDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="ProjectURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblResume">
+    <Key>
+      <PropertyRef Name="ResumeID" />
+    </Key>
+    <Property Name="ResumeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Title2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TblDepartment">
+    <Key>
+      <PropertyRef Name="DepartmentID" />
+    </Key>
+    <Property Name="DepartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TblEmployee" Relationship="CasgemPortfolioModel.FK_TblEmployee_TblDepartment" FromRole="TblDepartment" ToRole="TblEmployee" />
+  </EntityType>
+  <EntityType Name="TblEmployee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeSurrname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeSalary" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="EmployeeDepartment" Type="Int32" />
+    <NavigationProperty Name="TblDepartment" Relationship="CasgemPortfolioModel.FK_TblEmployee_TblDepartment" FromRole="TblEmployee" ToRole="TblDepartment" />
+  </EntityType>
+  <Association Name="FK_TblEmployee_TblDepartment">
+    <End Type="CasgemPortfolioModel.TblDepartment" Role="TblDepartment" Multiplicity="0..1" />
+    <End Type="CasgemPortfolioModel.TblEmployee" Role="TblEmployee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblDepartment">
+        <PropertyRef Name="DepartmentID" />
+      </Principal>
+      <Dependent Role="TblEmployee">
+        <PropertyRef Name="EmployeeDepartment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TblWhoAmI">
+    <Key>
+      <PropertyRef Name="WhoAmIID" />
+    </Key>
+    <Property Name="WhoAmIID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Title2" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CvURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblVideoSection">
+    <Key>
+      <PropertyRef Name="VideoSectionId" />
+    </Key>
+    <Property Name="VideoSectionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="VideoURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="VideoURL2" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

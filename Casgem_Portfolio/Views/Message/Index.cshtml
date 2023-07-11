@@ -23,7 +23,17 @@
             <td>@item.NameSurname</td>
             <td>@item.MessageSubject</td>
             <td><a href="/Message/DeleteMessage/@item.MessageID" class="btn btn-outline-danger">Sil</a></td>
-            <td><a href="/Message/MessageDetails/@item.MessageID" class="btn btn-outline-dark">Mesajı Aç</a></td>
+            <td><a href="#" onclick="showMessageDetails('@item.MessageSubject', '@item.NameSurname', '@item.sernderMail', '@item.Content');" class="btn btn-outline-dark">Mesajı Aç</a></td>
         </tr>
     }
 </table>
+
+<script>
+    function showMessageDetails(subject, nameSurname, senderMail, content) {
+        var message = "Konu: " + subject +
+            "\nGönderen: " + nameSurname +
+            "\nMail Adresi: " + senderMail +
+            "\nMessage: " + content;
+        alert(message);
+    }
+</script>

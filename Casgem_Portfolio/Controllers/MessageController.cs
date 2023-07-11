@@ -22,11 +22,5 @@ namespace Casgem_Portfolio.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        [HttpGet]
-        public ActionResult MessageDetails(int id)
-        {
-            var value = db.TblMessage.Find(id);
-            return View(value);
-        }
     }
 }

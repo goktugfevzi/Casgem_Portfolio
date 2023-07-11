@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>statistic</h2>
+
+<div class="card text-white bg-primary mb-3" style=" width: 100%;">
+
+    <div class="card-body">
+        <h5 class="card-title" style="color:white">Personel Sayısı: @ViewBag.employeeCount</h5>
+    </div>
+</div>
+
+<div class="card text-white bg-info mb-3" style=" width: 100%;">
+
+    <div class="card-body">
+        <h5 class="card-title" style="color:white">En Yüksek Maaşlı Personel: @ViewBag.maxSalaryEmployee</h5>
+    </div>
+</div>
+
+<div class="card text-white bg-dark mb-3" style=" width: 100%;">
+
+    <div class="card-body">
+        <h5 class="card-title" style="color:white">Tüm şehirler: @ViewBag.totalCityCount</h5>
+    </div>
+</div>
+
+<div class="card text-white bg-warning mb-3" style=" width: 100%;">
+
+    <div class="card-body">
+        <h5 class="card-title" style="color:white">Ortalama Maaş:  @ViewBag.avgEmployeeSalary</h5>
+    </div>
+</div>
+<div class="card text-white bg-secondary mb-3" style=" width: 100%;">
+
+    <div class="card-body">
+        <h5 class="card-title" style="color:white">Yazılımcı Sayısı: @ViewBag.countSoftwareDepartment</h5>
+    </div>
+</div>
+
+
+<div class="card text-white bg-secondary mb-3" style=" width: 100%;">
+
+    <div class="card-body">
+        <h5 class="card-title" style="color:white">Yazılımcı Sayısı: @ViewBag.cityQuery</h5>
+    </div>
+</div>
