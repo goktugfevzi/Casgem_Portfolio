@@ -95,6 +95,13 @@ warning 6013: The table/view 'CasgemPortfolio.dbo.TblEmployeeCount' does not hav
           <Property Name="ServiceNumber" Type="char" MaxLength="2" />
           <Property Name="ServiceContent" Type="nvarchar" MaxLength="1000" />
         </EntityType>
+        <EntityType Name="TblTypingText">
+          <Key>
+            <PropertyRef Name="TypingTextID" />
+          </Key>
+          <Property Name="TypingTextID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypingText" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="TblVideoSection">
           <Key>
             <PropertyRef Name="VideoSectionId" />
@@ -137,6 +144,7 @@ warning 6013: The table/view 'CasgemPortfolio.dbo.TblEmployeeCount' does not hav
           <EntitySet Name="TblReference" EntityType="Self.TblReference" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblResume" EntityType="Self.TblResume" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblTypingText" EntityType="Self.TblTypingText" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblVideoSection" EntityType="Self.TblVideoSection" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblWhoAmI" EntityType="Self.TblWhoAmI" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_TblEmployee_TblDepartment" Association="Self.FK_TblEmployee_TblDepartment">
@@ -183,6 +191,7 @@ warning 6013: The table/view 'CasgemPortfolio.dbo.TblEmployeeCount' does not hav
           </AssociationSet>
           <EntitySet Name="TblWhoAmI" EntityType="CasgemPortfolioModel.TblWhoAmI" />
           <EntitySet Name="TblVideoSection" EntityType="CasgemPortfolioModel.TblVideoSection" />
+          <EntitySet Name="TblTypingText" EntityType="CasgemPortfolioModel.TblTypingText" />
         </EntityContainer>
         <EntityType Name="TblMessage">
           <Key>
@@ -283,6 +292,13 @@ warning 6013: The table/view 'CasgemPortfolio.dbo.TblEmployeeCount' does not hav
           <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="VideoURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="VideoURL2" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TblTypingText">
+          <Key>
+            <PropertyRef Name="TypingTextID" />
+          </Key>
+          <Property Name="TypingTextID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypingText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -403,6 +419,14 @@ warning 6013: The table/view 'CasgemPortfolio.dbo.TblEmployeeCount' does not hav
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Title1" ColumnName="Title1" />
                 <ScalarProperty Name="VideoSectionId" ColumnName="VideoSectionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblTypingText">
+            <EntityTypeMapping TypeName="CasgemPortfolioModel.TblTypingText">
+              <MappingFragment StoreEntitySet="TblTypingText">
+                <ScalarProperty Name="TypingText" ColumnName="TypingText" />
+                <ScalarProperty Name="TypingTextID" ColumnName="TypingTextID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

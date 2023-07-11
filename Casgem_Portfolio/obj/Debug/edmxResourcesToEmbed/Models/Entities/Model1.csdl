@@ -35,6 +35,7 @@
     </AssociationSet>
     <EntitySet Name="TblWhoAmI" EntityType="CasgemPortfolioModel.TblWhoAmI" />
     <EntitySet Name="TblVideoSection" EntityType="CasgemPortfolioModel.TblVideoSection" />
+    <EntitySet Name="TblTypingText" EntityType="CasgemPortfolioModel.TblTypingText" />
   </EntityContainer>
   <EntityType Name="TblMessage">
     <Key>
@@ -135,5 +136,12 @@
     <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="VideoURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="VideoURL2" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblTypingText">
+    <Key>
+      <PropertyRef Name="TypingTextID" />
+    </Key>
+    <Property Name="TypingTextID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypingText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

@@ -117,5 +117,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TblTypingText">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblTypingText">
+        <MappingFragment StoreEntitySet="TblTypingText">
+          <ScalarProperty Name="TypingText" ColumnName="TypingText" />
+          <ScalarProperty Name="TypingTextID" ColumnName="TypingTextID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

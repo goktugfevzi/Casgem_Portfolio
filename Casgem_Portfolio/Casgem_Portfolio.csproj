@@ -209,6 +209,9 @@
     <Compile Include="Models\Entities\TblService.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entities\TblTypingText.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entities\TblVideoSection.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -474,6 +477,7 @@
     <Content Include="Views\Portfolio\PartialTestimational.cshtml" />
     <Content Include="Views\Portfolio\PartialFooter.cshtml" />
     <Content Include="Views\Portfolio\PartialHireMe.cshtml" />
+    <Content Include="Views\Portfolio\PartialTypingText.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

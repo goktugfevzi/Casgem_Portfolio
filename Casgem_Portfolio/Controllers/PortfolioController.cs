@@ -61,11 +61,16 @@ namespace Casgem_Portfolio.Controllers
             var values = db.TblResume.ToList();
             return PartialView(values);
         }
+        public PartialViewResult PartialTypingText()
+        {
+            var values = db.TblTypingText.ToArray();
+            return PartialView(values);
+        }
         public PartialViewResult PartialStatistic()
         {
             ViewBag.totalService = db.TblService.Count();
             ViewBag.totalMessage = db.TblMessage.Count();
-            ViewBag.totalThanksMessage=db.TblMessage.Where(x=>x.MessageSubject=="Teşekkür").Count();
+            ViewBag.totalThanksMessage = db.TblMessage.Where(x => x.MessageSubject == "Teşekkür").Count();
 
             return PartialView();
         }

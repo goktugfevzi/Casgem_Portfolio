@@ -36,5 +36,6 @@ namespace Casgem_Portfolio.Models.Entities
         public virtual DbSet<TblEmployee> TblEmployee { get; set; }
         public virtual DbSet<TblWhoAmI> TblWhoAmI { get; set; }
         public virtual DbSet<TblVideoSection> TblVideoSection { get; set; }
+        public virtual DbSet<TblTypingText> TblTypingText { get; set; }
     }
 }
