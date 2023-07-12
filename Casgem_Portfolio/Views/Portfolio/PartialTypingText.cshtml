@@ -7,8 +7,7 @@
         @foreach (var item in Model)
         {
             @Html.Raw($"'{item.TypingText}',")
-        }
-                                                ""       ];
+        }];
         const typingDelay = 200;
         const erasingDelay = 10;
         const newTextDelay = 100; // Delay between current and next text
