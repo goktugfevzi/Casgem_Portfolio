@@ -4,13 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="13d3bdb8e8c942e5a79a5012171de383" Name="Diagram1">
+      <Diagram DiagramId="13d3bdb8e8c942e5a79a5012171de383" Name="Diagram1" ZoomLevel="71">
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblFeature" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblService" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblMessage" Width="1.5" PointX="0.75" PointY="3.75" />
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblReference" Width="1.5" PointX="3.375" PointY="3.75" />
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblProject" Width="1.5" PointX="5.375" PointY="0.75" />
-        <EntityTypeShape EntityType="CasgemPortfolioModel.TblResume" Width="1.5" PointX="5.375" PointY="3.75" />
         <EntityTypeShape EntityType="CasgemPortfolioModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.75" />
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblDepartment" Width="1.5" PointX="0.75" PointY="7.375" />
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblEmployee" Width="1.5" PointX="3" PointY="7" />
@@ -18,6 +17,7 @@
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblWhoAmI" Width="1.5" PointX="7.375" PointY="0.75" />
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblVideoSection" Width="1.5" PointX="7.375" PointY="3.75" />
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblTypingText" Width="1.5" PointX="8.375" PointY="6.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblContacts" Width="1.5" PointX="9.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

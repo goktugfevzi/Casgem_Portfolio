@@ -12,8 +12,7 @@ namespace Casgem_Portfolio.Controllers
         CasgemPortfolioEntities db = new CasgemPortfolioEntities();
         public ActionResult Index()
         {
-            var values = db.TblService.ToList();
-            return View(values);
+            return View();
         }
         [HttpGet]
         public ActionResult AddService()

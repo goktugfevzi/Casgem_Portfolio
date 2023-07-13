@@ -43,11 +43,13 @@ namespace Casgem_Portfolio.Controllers
         }
         public PartialViewResult PartialService()
         {
-            return PartialView();
+            var values = db.TblService.ToList();
+            return PartialView(values);
         }
         public PartialViewResult PartialTestimational()
         {
-            return PartialView();
+            var values = db.TblReference.ToList();
+            return PartialView(values);
         }
         public PartialViewResult PartialFeature()
         {
@@ -56,11 +58,7 @@ namespace Casgem_Portfolio.Controllers
             ViewBag.featureImageURL = db.TblFeature.Select(x => x.FeatureImageURL).FirstOrDefault();
             return PartialView();
         }
-        public PartialViewResult MyResume()
-        {
-            var values = db.TblResume.ToList();
-            return PartialView(values);
-        }
+
         public PartialViewResult PartialTypingText()
         {
             var values = db.TblTypingText.ToArray();

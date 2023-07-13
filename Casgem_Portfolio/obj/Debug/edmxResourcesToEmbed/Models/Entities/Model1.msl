@@ -54,16 +54,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TblResume">
-      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblResume">
-        <MappingFragment StoreEntitySet="TblResume">
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Title2" ColumnName="Title2" />
-          <ScalarProperty Name="Title1" ColumnName="Title1" />
-          <ScalarProperty Name="ResumeID" ColumnName="ResumeID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="CasgemPortfolioModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
@@ -122,6 +112,17 @@
         <MappingFragment StoreEntitySet="TblTypingText">
           <ScalarProperty Name="TypingText" ColumnName="TypingText" />
           <ScalarProperty Name="TypingTextID" ColumnName="TypingTextID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblContacts">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblContacts">
+        <MappingFragment StoreEntitySet="TblContacts">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

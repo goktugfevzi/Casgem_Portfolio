@@ -13,6 +13,10 @@ namespace Casgem_Portfolio.Controllers
         // GET: Contact
         public ActionResult Index()
         {
+            ViewBag.contactTitle = db.TblContacts.Select(x => x.Title).FirstOrDefault();
+            ViewBag.contactPhoneNumber = db.TblContacts.Select(x => x.PhoneNumber).FirstOrDefault();
+            ViewBag.contactEMail = db.TblContacts.Select(x => x.EMail).FirstOrDefault();
+            ViewBag.contactAddress = db.TblContacts.Select(x => x.Address).FirstOrDefault();
             return View();
         }
         [HttpPost]

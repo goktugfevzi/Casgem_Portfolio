@@ -25,7 +25,6 @@
     <EntitySet Name="TblMessage" EntityType="CasgemPortfolioModel.TblMessage" />
     <EntitySet Name="TblReference" EntityType="CasgemPortfolioModel.TblReference" />
     <EntitySet Name="TblProject" EntityType="CasgemPortfolioModel.TblProject" />
-    <EntitySet Name="TblResume" EntityType="CasgemPortfolioModel.TblResume" />
     <EntitySet Name="sysdiagrams" EntityType="CasgemPortfolioModel.sysdiagrams" />
     <EntitySet Name="TblDepartment" EntityType="CasgemPortfolioModel.TblDepartment" />
     <EntitySet Name="TblEmployee" EntityType="CasgemPortfolioModel.TblEmployee" />
@@ -36,6 +35,7 @@
     <EntitySet Name="TblWhoAmI" EntityType="CasgemPortfolioModel.TblWhoAmI" />
     <EntitySet Name="TblVideoSection" EntityType="CasgemPortfolioModel.TblVideoSection" />
     <EntitySet Name="TblTypingText" EntityType="CasgemPortfolioModel.TblTypingText" />
+    <EntitySet Name="TblContacts" EntityType="CasgemPortfolioModel.TblContacts" />
   </EntityContainer>
   <EntityType Name="TblMessage">
     <Key>
@@ -65,15 +65,6 @@
     <Property Name="ProjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="ProjectDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="ProjectURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="TblResume">
-    <Key>
-      <PropertyRef Name="ResumeID" />
-    </Key>
-    <Property Name="ResumeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Title1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Title2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -143,5 +134,15 @@
     </Key>
     <Property Name="TypingTextID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TypingText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblContacts">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>
