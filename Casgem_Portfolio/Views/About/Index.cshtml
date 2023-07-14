@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!doctype html>
+<html lang="en">
+
+@Html.Action("PartialHead", "Portfolio")
+<body>
+    @Html.Action("PartialNavbar", "Portfolio")
+    @Html.Action("PartialHeader")
+    @Html.Action("PartialAbout")
+    @Html.Action("PartialSection")
+    @Html.Action("PartilAbilities")
+    @Html.Action("PartialFooter")
+    @Html.Partial("PartialScript")
+</body>
+
+</html>

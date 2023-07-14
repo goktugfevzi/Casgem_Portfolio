@@ -126,5 +126,60 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="TblAboutAbilities">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblAboutAbilities">
+        <MappingFragment StoreEntitySet="TblAboutAbilities">
+          <ScalarProperty Name="AbilityName" ColumnName="AbilityName" />
+          <ScalarProperty Name="AbilityRate" ColumnName="AbilityRate" />
+          <ScalarProperty Name="AbilitiesID" ColumnName="AbilitiesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAboutHeader">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblAboutHeader">
+        <MappingFragment StoreEntitySet="TblAboutHeader">
+          <ScalarProperty Name="Redirect2" ColumnName="Redirect2" />
+          <ScalarProperty Name="Redirect1" ColumnName="Redirect1" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="HeaderID" ColumnName="HeaderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAboutSection">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblAboutSection">
+        <MappingFragment StoreEntitySet="TblAboutSection">
+          <ScalarProperty Name="SectionDescription" ColumnName="SectionDescription" />
+          <ScalarProperty Name="SectionTitle" ColumnName="SectionTitle" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAboutAwards">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblAboutAwards">
+        <MappingFragment StoreEntitySet="TblAboutAwards">
+          <ScalarProperty Name="AwardsID" ColumnName="AwardsID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAboutPartial">
+      <EntityTypeMapping TypeName="CasgemPortfolioModel.TblAboutPartial">
+        <MappingFragment StoreEntitySet="TblAboutPartial">
+          <ScalarProperty Name="AboutID" ColumnName="AboutID" />
+          <ScalarProperty Name="CvURL" ColumnName="CvURL" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Title2" ColumnName="Title2" />
+          <ScalarProperty Name="Title1" ColumnName="Title1" />
+          <ScalarProperty Name="PhotoURL" ColumnName="PhotoURL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

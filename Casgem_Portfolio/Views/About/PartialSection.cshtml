@@ -1,0 +1,30 @@
+﻿@model List<Casgem_Portfolio.Models.Entities.TblAboutSection>
+<div class="py-5 w3l-resume">
+    <div class="container py-lg-5 py-3">
+        <h5 class="title-small mb-2"> Hello</h5>
+        <h3 class="title-big mb-4">İşletmenize hemen yeni bir Yaratıcı başlangıç sağlayabilirim! </h3>
+        <p>
+            Şu anda web sitesi tasarımı, backend yazımı ve veritabanı yazımı gibi işlemleri yapabiliyorum. Ayrıca Google Play Store için uygulamalar geliştiriyorum. Yazılım geliştirme alanında uzun yıllardır heyecanımı kaybetmeden çalışıyorum.
+        </p>
+
+        @foreach (var item in Model)
+        {
+            <div class="row features-w3pvt-main mt-5 pt-md-3" id="features">
+                <div class="col-lg-4 col-md-6 feature-gird">
+                    <div class="row features-hny-inner-gd">
+                        <div class="col-md-2 col-2 featured_grid_left">
+                            <div class="icon_left_grid">
+                                <span class="@item.Icon" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-10 col-10 featured_grid_right_info">
+                            <h4><a class="link-hny" href="#url">@item.SectionTitle </a></h4>
+                            <p>@item.SectionDescription</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>

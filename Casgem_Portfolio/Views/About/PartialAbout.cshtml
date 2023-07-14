@@ -1,0 +1,48 @@
+﻿@model Casgem_Portfolio.Models.Entities.TblAboutPartial
+<section class="w3l-aboutblock1" id="about">
+    <div class="midd-w3 py-5">
+        <div class="container py-lg-5 py-md-3">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="position-relative">
+                        <img src="~/Templates/alexander-starter/assets/images/myphoto1.jpg" alt="" class="radius-image img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 mt-lg-0 mt-5">
+                    <h5 class="title-small mb-2">@Model.Title1</h5>
+                    <h3 class="title-big">@Model.Title2</h3>
+                    <p class="mt-4">
+                        @Model.Description
+                    </p>
+                    <div class="my-info mt-4">
+                        <div class="single-info">
+                            <span>Name:</span>
+                            <p>@Model.Name</p>
+                        </div>
+                        <div class="single-info">
+                            <span>Age:</span>
+                            <p>@Model.Age Years</p>
+                        </div>
+                        <div class="single-info">
+                            <span>From:</span>
+                            <p>@Model.Address</p>
+                        </div>
+                        <div class="single-info">
+                            <span>Email:</span>
+                            <p><a href="mailto:alexander@mail.com">@Model.Email</a></p>
+                        </div>
+                    </div>
+                    <div class="my-social mt-lg-5 mt-4">
+                        <a href="@Model.CvURL" class="btn btn-style btn-primary">Download CV</a>
+                        <ul class="social m-0 p-0">
+                            <li><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#instagram"><span class="fa fa-instagram"></span></a></li>
+                            <li><a href="#facebook"><span class="fa fa-facebook-official"></span></a></li>
+                            <li><a href="#linkedin"><span class="fa fa-linkedin-square"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

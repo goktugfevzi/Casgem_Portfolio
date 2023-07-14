@@ -10,6 +10,56 @@
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
+  <EntityType Name="TblAboutAbilities">
+    <Key>
+      <PropertyRef Name="AbilitiesID" />
+    </Key>
+    <Property Name="AbilitiesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AbilityRate" Type="int" />
+    <Property Name="AbilityName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TblAboutAwards">
+    <Key>
+      <PropertyRef Name="AwardsID" />
+    </Key>
+    <Property Name="Icon" Type="nchar" MaxLength="10" />
+    <Property Name="Title" Type="nchar" MaxLength="10" />
+    <Property Name="Description" Type="nchar" MaxLength="10" />
+    <Property Name="AwardsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TblAboutHeader">
+    <Key>
+      <PropertyRef Name="HeaderID" />
+    </Key>
+    <Property Name="HeaderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Redirect1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Redirect2" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblAboutPartial">
+    <Key>
+      <PropertyRef Name="AboutID" />
+    </Key>
+    <Property Name="PhotoURL" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Title1" Type="nvarchar" MaxLength="100" />
+    <Property Name="Title2" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="CvURL" Type="nvarchar" MaxLength="1000" />
+    <Property Name="AboutID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TblAboutSection">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="SectionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="100" />
+    <Property Name="SectionTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="SectionDescription" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
   <EntityType Name="TblContacts">
     <Key>
       <PropertyRef Name="ContactID" />
@@ -127,6 +177,11 @@
   </Association>
   <EntityContainer Name="CasgemPortfolioModelStoreContainer">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAboutAbilities" EntityType="Self.TblAboutAbilities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAboutAwards" EntityType="Self.TblAboutAwards" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAboutHeader" EntityType="Self.TblAboutHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAboutPartial" EntityType="Self.TblAboutPartial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAboutSection" EntityType="Self.TblAboutSection" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblContacts" EntityType="Self.TblContacts" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblDepartment" EntityType="Self.TblDepartment" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblEmployee" EntityType="Self.TblEmployee" Schema="dbo" store:Type="Tables" />

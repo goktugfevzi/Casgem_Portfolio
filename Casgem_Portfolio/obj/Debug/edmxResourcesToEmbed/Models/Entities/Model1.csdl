@@ -36,6 +36,11 @@
     <EntitySet Name="TblVideoSection" EntityType="CasgemPortfolioModel.TblVideoSection" />
     <EntitySet Name="TblTypingText" EntityType="CasgemPortfolioModel.TblTypingText" />
     <EntitySet Name="TblContacts" EntityType="CasgemPortfolioModel.TblContacts" />
+    <EntitySet Name="TblAboutAbilities" EntityType="CasgemPortfolioModel.TblAboutAbilities" />
+    <EntitySet Name="TblAboutHeader" EntityType="CasgemPortfolioModel.TblAboutHeader" />
+    <EntitySet Name="TblAboutSection" EntityType="CasgemPortfolioModel.TblAboutSection" />
+    <EntitySet Name="TblAboutAwards" EntityType="CasgemPortfolioModel.TblAboutAwards" />
+    <EntitySet Name="TblAboutPartial" EntityType="CasgemPortfolioModel.TblAboutPartial" />
   </EntityContainer>
   <EntityType Name="TblMessage">
     <Key>
@@ -144,5 +149,55 @@
     <Property Name="EMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Address" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblAboutAbilities">
+    <Key>
+      <PropertyRef Name="AbilitiesID" />
+    </Key>
+    <Property Name="AbilitiesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AbilityRate" Type="Int32" />
+    <Property Name="AbilityName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblAboutHeader">
+    <Key>
+      <PropertyRef Name="HeaderID" />
+    </Key>
+    <Property Name="HeaderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Redirect1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Redirect2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblAboutSection">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="SectionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Icon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SectionTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SectionDescription" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblAboutAwards">
+    <Key>
+      <PropertyRef Name="AwardsID" />
+    </Key>
+    <Property Name="Icon" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="AwardsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TblAboutPartial">
+    <Key>
+      <PropertyRef Name="AboutID" />
+    </Key>
+    <Property Name="PhotoURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Title1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Title2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CvURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="AboutID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
 </Schema>
