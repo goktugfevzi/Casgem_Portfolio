@@ -42,5 +42,6 @@ namespace Casgem_Portfolio.Models.Entities
         public virtual DbSet<TblAboutSection> TblAboutSection { get; set; }
         public virtual DbSet<TblAboutAwards> TblAboutAwards { get; set; }
         public virtual DbSet<TblAboutPartial> TblAboutPartial { get; set; }
+        public virtual DbSet<TblUser> TblUser { get; set; }
     }
 }

@@ -41,6 +41,7 @@
     <EntitySet Name="TblAboutSection" EntityType="CasgemPortfolioModel.TblAboutSection" />
     <EntitySet Name="TblAboutAwards" EntityType="CasgemPortfolioModel.TblAboutAwards" />
     <EntitySet Name="TblAboutPartial" EntityType="CasgemPortfolioModel.TblAboutPartial" />
+    <EntitySet Name="TblUser" EntityType="CasgemPortfolioModel.TblUser" />
   </EntityContainer>
   <EntityType Name="TblMessage">
     <Key>
@@ -199,5 +200,13 @@
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="CvURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
     <Property Name="AboutID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TblUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

@@ -23,6 +23,7 @@
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblAboutSection" Width="1.5" PointX="5.125" PointY="5.75" />
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblAboutAwards" Width="1.5" PointX="0.75" PointY="8.75" />
         <EntityTypeShape EntityType="CasgemPortfolioModel.TblAboutPartial" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="CasgemPortfolioModel.TblUser" Width="1.5" PointX="8.75" PointY="5.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

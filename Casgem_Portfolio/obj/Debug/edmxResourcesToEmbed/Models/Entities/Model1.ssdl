@@ -143,6 +143,14 @@
     <Property Name="TypingTextID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TypingText" Type="nvarchar" MaxLength="100" />
   </EntityType>
+  <EntityType Name="TblUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Password" Type="nvarchar" MaxLength="100" />
+  </EntityType>
   <EntityType Name="TblVideoSection">
     <Key>
       <PropertyRef Name="VideoSectionId" />
@@ -191,6 +199,7 @@
     <EntitySet Name="TblReference" EntityType="Self.TblReference" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblTypingText" EntityType="Self.TblTypingText" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblUser" EntityType="Self.TblUser" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblVideoSection" EntityType="Self.TblVideoSection" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblWhoAmI" EntityType="Self.TblWhoAmI" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_TblEmployee_TblDepartment" Association="Self.FK_TblEmployee_TblDepartment">

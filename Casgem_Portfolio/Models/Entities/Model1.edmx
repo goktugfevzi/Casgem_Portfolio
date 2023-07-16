@@ -148,6 +148,14 @@
           <Property Name="TypingTextID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TypingText" Type="nvarchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="TblUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="TblVideoSection">
           <Key>
             <PropertyRef Name="VideoSectionId" />
@@ -196,6 +204,7 @@
           <EntitySet Name="TblReference" EntityType="Self.TblReference" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblService" EntityType="Self.TblService" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblTypingText" EntityType="Self.TblTypingText" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblUser" EntityType="Self.TblUser" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblVideoSection" EntityType="Self.TblVideoSection" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblWhoAmI" EntityType="Self.TblWhoAmI" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_TblEmployee_TblDepartment" Association="Self.FK_TblEmployee_TblDepartment">
@@ -248,6 +257,7 @@
           <EntitySet Name="TblAboutSection" EntityType="CasgemPortfolioModel.TblAboutSection" />
           <EntitySet Name="TblAboutAwards" EntityType="CasgemPortfolioModel.TblAboutAwards" />
           <EntitySet Name="TblAboutPartial" EntityType="CasgemPortfolioModel.TblAboutPartial" />
+          <EntitySet Name="TblUser" EntityType="CasgemPortfolioModel.TblUser" />
         </EntityContainer>
         <EntityType Name="TblMessage">
           <Key>
@@ -406,6 +416,14 @@
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="CvURL" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
           <Property Name="AboutID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="TblUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -590,6 +608,15 @@
                 <ScalarProperty Name="Title2" ColumnName="Title2" />
                 <ScalarProperty Name="Title1" ColumnName="Title1" />
                 <ScalarProperty Name="PhotoURL" ColumnName="PhotoURL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblUser">
+            <EntityTypeMapping TypeName="CasgemPortfolioModel.TblUser">
+              <MappingFragment StoreEntitySet="TblUser">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
