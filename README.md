@@ -11,6 +11,7 @@ Murat Yücedağ ile yüzyüze eğitimde yapılmış projedir.
 ## Some Screenshots
 
 <div align="center">
+
 https://github.com/goktugfevzi/Casgem_Portfolio/assets/64567701/d1dd3502-4a0e-45cf-b538-32f4a864aa39
 
 <br/>
