@@ -33,9 +33,14 @@ namespace Casgem_Portfolio.Controllers
         }
         public ActionResult PartialAbilities()
         {
-            return PartialView();
+            var values = db.TblAboutAbilities.ToList();
+            return PartialView(values);
         }
-        public ActionResult PartialAwards() { return PartialView(); }
+        public ActionResult PartialAwards()
+        {
+            var values = db.TblAboutAwards.ToList();
+            return PartialView(values);
+        }
         public ActionResult PartilFooter() { return PartialView(); }
         public ActionResult PartialScript() { return PartialView(); }
     }

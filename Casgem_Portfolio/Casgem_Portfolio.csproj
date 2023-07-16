@@ -497,8 +497,8 @@
     <Content Include="Views\About\PartialSection.cshtml" />
     <Content Include="Views\About\PartialAbilities.cshtml" />
     <Content Include="Views\About\PartialAwards.cshtml" />
-    <Content Include="Views\About\PartilFooter.cshtml" />
     <Content Include="Views\About\PartialScript.cshtml" />
+    <Content Include="Views\Portfolio\PartialScript.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
